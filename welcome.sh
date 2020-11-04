@@ -13,3 +13,6 @@ echo "a * b + c =" $e
 
 f=$(( $c + ($a/$b)))
 echo "c + a / b =" $f
+
+g=$(( ($a%$b) + $c ))
+echo "a % b + c =" $g
