@@ -49,5 +49,19 @@ done
 echo "Arrays values in descending order="
 echo ${array[@]}
 
+for (( i=1; i<4; i++ ))
+do
+for (( j=i+1; j<5; j++ ))
+do
+if [[ ${array[i]} -gt ${array[j]} ]]
+then
+z="${array[i]}"
+array[$i]="${array[j]}"
+array[$j]="$z";
+fi
+done
+done
 
+echo "Arrays values in ascending order="
+echo ${array[@]}
 
