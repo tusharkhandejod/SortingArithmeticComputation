@@ -7,3 +7,6 @@ read -p "Enter the third value=" c
 
 d=$(( $a + ($b*$c)))
 echo "a + b * c=" $d
+
+e=$((($a*$b) + $c ))
+echo "a * b + c =" $e
