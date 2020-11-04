@@ -32,5 +32,22 @@ for (( i=1; i<5; i++ ))
 do
 array[$i]=${operation[UC$i]}
 done
+ 
+for (( i=1; i<4; i++ ))
+do
+for (( j=i+1; j<5; j++ ))
+do
+if [[ ${array[i]} -lt ${array[j]} ]]
+then
+z="${array[i]}"
+array[$i]="${array[j]}"
+array[$j]="$z";
+fi
+done
+done
+
+echo "Arrays values in descending order="
+echo ${array[@]}
+
 
 
